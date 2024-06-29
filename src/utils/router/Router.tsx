@@ -1,8 +1,7 @@
 
-import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import routes from './routes';
-
+import Layout from '../../components/Layout';
 
 const Router = () => {
 
@@ -15,7 +14,7 @@ const Router = () => {
           <Route
             path={path}
             key={key}
-            element={component()}
+            element={<Layout>{component()}</Layout>}
           />
         ))}
       </Routes>
